@@ -375,3 +375,5 @@ curl --X POST 'https://marketplace-api.tayara.tn/upload' \
   "producttype": 0
 }'
 ```
+# Tayara marketplace API Postman collection
+In addition to this documentation, You can use Postman collection available [here](https://docs.api.tayara.tn/assets/tayara_marketplace_api.postman_collection.json).

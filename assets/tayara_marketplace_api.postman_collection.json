@@ -1,0 +1,589 @@
+{
+	"info": {
+		"_postman_id": "85dd0736-10ca-4ddd-a0dc-ee5750126f9b",
+		"name": "Tayara Marketplace API",
+		"description": "Tayara marketplace API is a REST API that enables third parties to create ads on tayara.tn for the goal to be integrated in their systems like ERP, CRM...",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get categories list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://marketplace-api.tayara.tn/categories",
+					"protocol": "https",
+					"host": [
+						"marketplace-api",
+						"tayara",
+						"tn"
+					],
+					"path": [
+						"categories"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get categories list success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "https://marketplace-api.tayara.tn/categories",
+							"protocol": "https",
+							"host": [
+								"marketplace-api",
+								"tayara",
+								"tn"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "[\n  {\n    \"id\": \"60be84bd50ab95b45b08a09d\",                  // id of current category\n    \"parentcategoryxid\": \"60be84bc50ab95b45b08a093\",   // id of parent category\n    \"name\": \"Maisons et Villas\"               // name of category\n  }\n]"
+				},
+				{
+					"name": "Get categories list unauthorized",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer <INVALID_APP_TOKEN>",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "https://marketplace-api.tayara.tn/categories",
+							"protocol": "https",
+							"host": [
+								"marketplace-api",
+								"tayara",
+								"tn"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"code": 401,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"code\": 401,\n    \"error\": \"Forbidden\",\n    \"message\": \"You are forbidden to access .\"\n}"
+				},
+				{
+					"name": "Get categories list internal server error",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://marketplace-api.tayara.tn/categories?Authorization=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c",
+							"protocol": "https",
+							"host": [
+								"marketplace-api",
+								"tayara",
+								"tn"
+							],
+							"path": [
+								"categories"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+								}
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"code\": 500,\n    \"error\": \"Unknown\",\n    \"message\": \"\"         // exception details\n}"
+				}
+			]
+		},
+		{
+			"name": "Get categories details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://marketplace-api.tayara.tn/categories/{category_id}",
+					"protocol": "https",
+					"host": [
+						"marketplace-api",
+						"tayara",
+						"tn"
+					],
+					"path": [
+						"categories",
+						"{category_id}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get categories list success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "https://marketplace-api.tayara.tn/categories/60be84bd50ab95b45b08a09d",
+							"protocol": "https",
+							"host": [
+								"marketplace-api",
+								"tayara",
+								"tn"
+							],
+							"path": [
+								"categories",
+								"60be84bd50ab95b45b08a09d"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n  \"id\": \"60be84bd50ab95b45b08a09d\",\n  \"name\": \"Maisons et Villas\",\n  \"parentcategoryxid\": \"60be84bc50ab95b45b08a093\",\n  \"adparams\": [\n    {\n      \"name\": \"Type de transaction\",\n      \"type\": \"array\",\n      \"label\": \"Type de transaction\",\n      \"possiblevalues\": [\"À Vendre\", \"À Louer\"],\n      \"dependantName\": \"\"\n    },\n    {\n      \"name\": \"Superficie\",\n      \"type\": \"number\",\n      \"label\": \"Superficie\",\n      \"dependantName\": \"\"\n    },\n    {\n      \"name\": \"Salles de bains\",\n      \"type\": \"number\",\n      \"label\": \"Salles de bains\",\n      \"possiblevalues\": [\"1\", \"2\", \"3\", \"4\", \"5\", \"5+\"],\n      \"rangeValues\": {\n        \"min\": 0,\n        \"max\": 20\n      },\n      \"dependantName\": \"\"\n    },\n    {\n      \"name\": \"Chambres\",\n      \"type\": \"number\",\n      \"label\": \"Chambres\",\n      \"possiblevalues\": [\"1\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\", \"8\", \"9\", \"10\", \"10+\"],\n      \"rangeValues\": {\n        \"min\": 0,\n        \"max\": 20\n      },\n      \"dependantName\": \"\"\n    }\n  ]\n}"
+				},
+				{
+					"name": "Get categories list unauthorized",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer <INVALID_APP_TOKEN>",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "https://marketplace-api.tayara.tn/categories",
+							"protocol": "https",
+							"host": [
+								"marketplace-api",
+								"tayara",
+								"tn"
+							],
+							"path": [
+								"categories"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"code": 401,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"code\": 401,\n    \"error\": \"Forbidden\",\n    \"message\": \"You are forbidden to access .\"\n}"
+				},
+				{
+					"name": "Get categories list internal server error",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "https://marketplace-api.tayara.tn/categories",
+							"protocol": "https",
+							"host": [
+								"marketplace-api",
+								"tayara",
+								"tn"
+							],
+							"path": [
+								"categories"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"code\": 500,\n    \"error\": \"Unknown\",\n    \"message\": \"\"         // exception details\n}"
+				}
+			]
+		},
+		{
+			"name": "Upload images",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    \"IMAGE_URL\",\n    \"IMAGE_URL\",\n    \"IMAGE_URL\",\n    \"IMAGE_URL\"\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://marketplace-api.tayara.tn/upload",
+					"protocol": "https",
+					"host": [
+						"marketplace-api",
+						"tayara",
+						"tn"
+					],
+					"path": [
+						"upload"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Upload images success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    \"https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Tayara_Logo.svg/2560px-Tayara_Logo.svg.png\",\n    \"https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Tayara_Logo.svg/2560px-Tayara_Logo.svg.png\",\n    \"https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Tayara_Logo.svg/2560px-Tayara_Logo.svg.png\",\n    \"https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Tayara_Logo.svg/2560px-Tayara_Logo.svg.png\"\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://marketplace-api.tayara.tn/upload",
+							"protocol": "https",
+							"host": [
+								"marketplace-api",
+								"tayara",
+								"tn"
+							],
+							"path": [
+								"upload"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "[\n    \"https://storage.googleapis.com/tayara-migration-yams-pro/9a/9a8b8a05-dda0-40b1-bf68-f20b67df0f84\",\n    \"https://storage.googleapis.com/tayara-migration-yams-pro/9a/9a8b8a05-dda0-40b1-bf68-f20b67df0f84\",\n    \"https://storage.googleapis.com/tayara-migration-yams-pro/9a/9a8b8a05-dda0-40b1-bf68-f20b67df0f84\",\n    \"https://storage.googleapis.com/tayara-migration-yams-pro/9a/9a8b8a05-dda0-40b1-bf68-f20b67df0f84\"\n]"
+				},
+				{
+					"name": "Upload images unauthorized",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer <INVALID_APP_TOKEN>",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    \"https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Tayara_Logo.svg/2560px-Tayara_Logo.svg.png\",\n    \"https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Tayara_Logo.svg/2560px-Tayara_Logo.svg.png\",\n    \"https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Tayara_Logo.svg/2560px-Tayara_Logo.svg.png\",\n    \"https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Tayara_Logo.svg/2560px-Tayara_Logo.svg.png\"\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://marketplace-api.tayara.tn/upload",
+							"protocol": "https",
+							"host": [
+								"marketplace-api",
+								"tayara",
+								"tn"
+							],
+							"path": [
+								"upload"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"code\": 401,\n    \"error\": \"Forbidden\",\n    \"message\": \"You are forbidden to access .\"\n}"
+				},
+				{
+					"name": "Upload images internal server error",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    \"https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Tayara_Logo.svg/2560px-Tayara_Logo.svg.png\",\n    \"https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Tayara_Logo.svg/2560px-Tayara_Logo.svg.png\",\n    \"https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Tayara_Logo.svg/2560px-Tayara_Logo.svg.png\",\n    \"https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Tayara_Logo.svg/2560px-Tayara_Logo.svg.png\"\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://marketplace-api.tayara.tn/upload",
+							"protocol": "https",
+							"host": [
+								"marketplace-api",
+								"tayara",
+								"tn"
+							],
+							"path": [
+								"upload"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"code\": 500,\n    \"error\": \"Unknown\",\n    \"message\": \"\"         // exception details\n}"
+				}
+			]
+		},
+		{
+			"name": "Create Ad",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userid\": \"\",\n    \"title\": \"\",\n    \"subcategoryid\": \"\",\n    \"description\": \"\",\n    \"images\": [\n        \"\"\n    ],\n    \"location\": {\n        \"latitude\": 0.0,\n        \"longitude\": 0.0 ,\n        \"radius\" : 0        \n    },\n    \"price\": 0.0,\n    \"adparamvalues\": [\n        {\n            \"name\": \"\",  \n            \"value\": \"\"\n        },\n        {\n            \"name\": \"\",\n            \"value\": \"\"\n        }\n        \n    ],\n    \"userphonenumber\": \"\",\n    \"shopavatar\": \"\",\n    \"producttype\": 0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://marketplace-api.tayara.tn/postad",
+					"protocol": "https",
+					"host": [
+						"marketplace-api",
+						"tayara",
+						"tn"
+					],
+					"path": [
+						"postad"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Ad success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userid\": \"ced8e24d-055e-4886-960b-d8da91323784\",\n    \"title\": \"Belle Villa à vendre\",\n    \"subcategoryid\": \"60be84bd50ab95b45b08a09d\",\n    \"description\": \"Ville sur une superficie de 400 m² situé à la marsa\",\n    \"images\": [\n        \"https://storage.googleapis.com/tayara-migration-yams-pro/9a/9a8b8a05-dda0-40b1-bf68-f20b67df0f84\",\n        \"https://storage.googleapis.com/tayara-migration-yams-pro/9a/9a8b8a05-dda0-40b1-bf68-f20b67df0f84\",\n        \"https://storage.googleapis.com/tayara-migration-yams-pro/9a/9a8b8a05-dda0-40b1-bf68-f20b67df0f84\",\n        \"https://storage.googleapis.com/tayara-migration-yams-pro/9a/9a8b8a05-dda0-40b1-bf68-f20b67df0f84\"\n    ],\n    \"location\": {\n        \"latitude\": 36.8468805,\n        \"longitude\": 10.255426 ,\n        \"radius\" : 100        \n    },\n    \"price\": 0.0,\n    \"adparamvalues\": [\n        {\n            \"name\": \"Type de transaction\",  \n            \"value\": \"À Vendre\"\n        },\n        {\n            \"name\": \"Superficie\",\n            \"value\": \"400\"\n        },\n        {\n            \"name\": \"Salles de bains\",\n            \"value\": \"2\"\n        },\n        {\n            \"name\": \"Chambres\",\n            \"value\": \"8\"\n        }\n        \n    ],\n    \"userphonenumber\": \"+21600000000\",\n    \"shopavatar\": \"\",\n    \"producttype\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://marketplace-api.tayara.tn/postad",
+							"protocol": "https",
+							"host": [
+								"marketplace-api",
+								"tayara",
+								"tn"
+							],
+							"path": [
+								"postad"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n  \"code\": 200,\n  \"message\": \"ad created successfully\",\n  \"id\": \"string\"  // id of newly inserted ad \n}"
+				},
+				{
+					"name": "Create Ad Unauthorized",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer INVALID_TOKEN",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userid\": \"ced8e24d-055e-4886-960b-d8da91323784\",\n    \"title\": \"Belle Villa à vendre\",\n    \"subcategoryid\": \"60be84bd50ab95b45b08a09d\",\n    \"description\": \"Ville sur une superficie de 400 m² situé à la marsa\",\n    \"images\": [\n        \"https://storage.googleapis.com/tayara-migration-yams-pro/9a/9a8b8a05-dda0-40b1-bf68-f20b67df0f84\",\n        \"https://storage.googleapis.com/tayara-migration-yams-pro/9a/9a8b8a05-dda0-40b1-bf68-f20b67df0f84\",\n        \"https://storage.googleapis.com/tayara-migration-yams-pro/9a/9a8b8a05-dda0-40b1-bf68-f20b67df0f84\",\n        \"https://storage.googleapis.com/tayara-migration-yams-pro/9a/9a8b8a05-dda0-40b1-bf68-f20b67df0f84\"\n    ],\n    \"location\": {\n        \"latitude\": 36.8468805,\n        \"longitude\": 10.255426 ,\n        \"radius\" : 100        \n    },\n    \"price\": 0.0,\n    \"adparamvalues\": [\n        {\n            \"name\": \"Type de transaction\",  \n            \"value\": \"À Vendre\"\n        },\n        {\n            \"name\": \"Superficie\",\n            \"value\": \"400\"\n        },\n        {\n            \"name\": \"Salles de bains\",\n            \"value\": \"2\"\n        },\n        {\n            \"name\": \"Chambres\",\n            \"value\": \"8\"\n        }\n        \n    ],\n    \"userphonenumber\": \"+21600000000\",\n    \"shopavatar\": \"\",\n    \"producttype\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://marketplace-api.tayara.tn/postad",
+							"protocol": "https",
+							"host": [
+								"marketplace-api",
+								"tayara",
+								"tn"
+							],
+							"path": [
+								"postad"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"code\": 401,\n    \"error\": \"Forbidden\",\n    \"message\": \"You are forbidden to access .\"\n}"
+				},
+				{
+					"name": "Create Ad internal server error",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer INVALID_TOKEN",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userid\": \"ced8e24d-055e-4886-960b-d8da91323784\",\n    \"title\": \"Belle Villa à vendre\",\n    \"subcategoryid\": \"60be84bd50ab95b45b08a09d\",\n    \"description\": \"Ville sur une superficie de 400 m² situé à la marsa\",\n    \"images\": [\n        \"https://storage.googleapis.com/tayara-migration-yams-pro/9a/9a8b8a05-dda0-40b1-bf68-f20b67df0f84\",\n        \"https://storage.googleapis.com/tayara-migration-yams-pro/9a/9a8b8a05-dda0-40b1-bf68-f20b67df0f84\",\n        \"https://storage.googleapis.com/tayara-migration-yams-pro/9a/9a8b8a05-dda0-40b1-bf68-f20b67df0f84\",\n        \"https://storage.googleapis.com/tayara-migration-yams-pro/9a/9a8b8a05-dda0-40b1-bf68-f20b67df0f84\"\n    ],\n    \"location\": {\n        \"latitude\": 36.8468805,\n        \"longitude\": 10.255426 ,\n        \"radius\" : 100        \n    },\n    \"price\": 0.0,\n    \"adparamvalues\": [\n        {\n            \"name\": \"Type de transaction\",  \n            \"value\": \"À Vendre\"\n        },\n        {\n            \"name\": \"Superficie\",\n            \"value\": \"400\"\n        },\n        {\n            \"name\": \"Salles de bains\",\n            \"value\": \"2\"\n        },\n        {\n            \"name\": \"Chambres\",\n            \"value\": \"8\"\n        }\n        \n    ],\n    \"userphonenumber\": \"+21600000000\",\n    \"shopavatar\": \"\",\n    \"producttype\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://marketplace-api.tayara.tn/postad",
+							"protocol": "https",
+							"host": [
+								"marketplace-api",
+								"tayara",
+								"tn"
+							],
+							"path": [
+								"postad"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"code\": 500,\n    \"error\": \"Unknown\",\n    \"message\": \"\"         // exception details\n}"
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{APP_TOKEN}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "APP_TOKEN",
+			"value": "TOKEN_VALUE",
+			"type": "default"
+		}
+	]
+}
