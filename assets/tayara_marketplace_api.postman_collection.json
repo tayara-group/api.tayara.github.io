@@ -125,7 +125,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://marketplace-api.tayara.tn/categories/{category_id}",
+					"raw": "https://marketplace-api.tayara.tn/category/{category_id}",
 					"protocol": "https",
 					"host": [
 						"marketplace-api",
@@ -133,7 +133,7 @@
 						"tn"
 					],
 					"path": [
-						"categories",
+						"category",
 						"{category_id}"
 					]
 				}
@@ -151,7 +151,7 @@
 							}
 						],
 						"url": {
-							"raw": "https://marketplace-api.tayara.tn/categories/60be84bd50ab95b45b08a09d",
+							"raw": "https://marketplace-api.tayara.tn/category/60be84bd50ab95b45b08a09d",
 							"protocol": "https",
 							"host": [
 								"marketplace-api",
@@ -159,7 +159,7 @@
 								"tn"
 							],
 							"path": [
-								"categories",
+								"category",
 								"60be84bd50ab95b45b08a09d"
 							]
 						}
@@ -183,7 +183,7 @@
 							}
 						],
 						"url": {
-							"raw": "https://marketplace-api.tayara.tn/categories",
+							"raw": "https://marketplace-api.tayara.tn/category//60be84bd50ab95b45b08a09d",
 							"protocol": "https",
 							"host": [
 								"marketplace-api",
@@ -191,7 +191,9 @@
 								"tn"
 							],
 							"path": [
-								"categories"
+								"category",
+								"",
+								"60be84bd50ab95b45b08a09d"
 							],
 							"query": [
 								{
@@ -220,7 +222,7 @@
 							}
 						],
 						"url": {
-							"raw": "https://marketplace-api.tayara.tn/categories",
+							"raw": "https://marketplace-api.tayara.tn/category//60be84bd50ab95b45b08a09d",
 							"protocol": "https",
 							"host": [
 								"marketplace-api",
@@ -228,7 +230,9 @@
 								"tn"
 							],
 							"path": [
-								"categories"
+								"category",
+								"",
+								"60be84bd50ab95b45b08a09d"
 							],
 							"query": [
 								{
@@ -254,8 +258,14 @@
 				"method": "POST",
 				"header": [],
 				"body": {
-					"mode": "raw",
-					"raw": "[\n    \"IMAGE_URL\",\n    \"IMAGE_URL\",\n    \"IMAGE_URL\",\n    \"IMAGE_URL\"\n]",
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": []
+						}
+					],
 					"options": {
 						"raw": {
 							"language": "json"
@@ -288,8 +298,14 @@
 							}
 						],
 						"body": {
-							"mode": "raw",
-							"raw": "[\n    \"https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Tayara_Logo.svg/2560px-Tayara_Logo.svg.png\",\n    \"https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Tayara_Logo.svg/2560px-Tayara_Logo.svg.png\",\n    \"https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Tayara_Logo.svg/2560px-Tayara_Logo.svg.png\",\n    \"https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Tayara_Logo.svg/2560px-Tayara_Logo.svg.png\"\n]",
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/safouane/Downloads/tayara_small_logo.png"
+								}
+							],
 							"options": {
 								"raw": {
 									"language": "json"
@@ -314,7 +330,7 @@
 					"_postman_previewlanguage": "json",
 					"header": null,
 					"cookie": [],
-					"body": "[\n    \"https://storage.googleapis.com/tayara-migration-yams-pro/9a/9a8b8a05-dda0-40b1-bf68-f20b67df0f84\",\n    \"https://storage.googleapis.com/tayara-migration-yams-pro/9a/9a8b8a05-dda0-40b1-bf68-f20b67df0f84\",\n    \"https://storage.googleapis.com/tayara-migration-yams-pro/9a/9a8b8a05-dda0-40b1-bf68-f20b67df0f84\",\n    \"https://storage.googleapis.com/tayara-migration-yams-pro/9a/9a8b8a05-dda0-40b1-bf68-f20b67df0f84\"\n]"
+					"body": "[\n    \"https://storage.googleapis.com/tayara-migration-yams-pro/6a/6a7af380-1055-472b-aae6-e05484cdb70d\"\n]"
 				},
 				{
 					"name": "Upload images unauthorized",
@@ -328,8 +344,14 @@
 							}
 						],
 						"body": {
-							"mode": "raw",
-							"raw": "[\n    \"https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Tayara_Logo.svg/2560px-Tayara_Logo.svg.png\",\n    \"https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Tayara_Logo.svg/2560px-Tayara_Logo.svg.png\",\n    \"https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Tayara_Logo.svg/2560px-Tayara_Logo.svg.png\",\n    \"https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Tayara_Logo.svg/2560px-Tayara_Logo.svg.png\"\n]",
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/safouane/Downloads/tayara_small_logo.png"
+								}
+							],
 							"options": {
 								"raw": {
 									"language": "json"
@@ -368,8 +390,14 @@
 							}
 						],
 						"body": {
-							"mode": "raw",
-							"raw": "[\n    \"https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Tayara_Logo.svg/2560px-Tayara_Logo.svg.png\",\n    \"https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Tayara_Logo.svg/2560px-Tayara_Logo.svg.png\",\n    \"https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Tayara_Logo.svg/2560px-Tayara_Logo.svg.png\",\n    \"https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Tayara_Logo.svg/2560px-Tayara_Logo.svg.png\"\n]",
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/safouane/Downloads/tayara_small_logo.png"
+								}
+							],
 							"options": {
 								"raw": {
 									"language": "json"
@@ -554,7 +582,7 @@
 		"bearer": [
 			{
 				"key": "token",
-				"value": "{{APP_TOKEN}}",
+				"value": "mehditest",
 				"type": "string"
 			}
 		]
@@ -582,7 +610,7 @@
 	"variable": [
 		{
 			"key": "APP_TOKEN",
-			"value": "TOKEN_VALUE",
+			"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJqY2Q3SFdNeFFwbERXeTRkalJjc0xQc2dzbzdZTXA4RDNBREtWTVgxN1VvIn0.eyJleHAiOjE2NjQwNDM0NjcsImlhdCI6MTY2MTQ1MTQ2NywianRpIjoiMWY1ZmQwNDgtMWQ4MS00NjRiLTlmNzMtM2FlN2IyNDRlMDZlIiwiaXNzIjoiaHR0cHM6Ly93d3cudGF5YXJhLnRuL2F1dGgvcmVhbG1zL2NhcmF2ZWwiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiY2VkOGUyNGQtMDU1ZS00ODg2LTk2MGItZDhkYTkxMzIzNzg0IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiY2FyYXZlbC1tYXJrZXRwbGFjZSIsInNlc3Npb25fc3RhdGUiOiI2MGE0NDY2My01ZjM1LTQyMTYtYWExNS1lOTY1OTRiMmUxZTYiLCJhY3IiOiIxIiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbImRlZmF1bHQtcm9sZXMtY2FyYXZlbCIsIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJjYXJhdmVsLW1hcmtldHBsYWNlIjp7InJvbGVzIjpbInRheWFyYS11c2VyIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im9wZW5pZCBlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsInVzZXJfaWQiOiJjZWQ4ZTI0ZC0wNTVlLTQ4ODYtOTYwYi1kOGRhOTEzMjM3ODQiLCJuYW1lIjoibWVoZGkwMiBtZWhkaTAyIiwicGhvbmVfbnVtYmVyIjoiKzIxNjU0ODk2NDc2IiwicHJlZmVycmVkX3VzZXJuYW1lIjoiNTQ4OTY0NzYiLCJnaXZlbl9uYW1lIjoibWVoZGkwMiIsImZhbWlseV9uYW1lIjoibWVoZGkwMiJ9.mPxRjsqv6KEGbFZ_ZwO8zF6y-ZnpHeePA-TQazNDZ6Vdv8ErOIwO03ooN62WTjBIXLsEnLPZR8ky1nwXeXz-IMjyfY2ibK10pODBk6gAnbac9Ws30yZYoRMqPtguF2iS14qTv0_kj_nwu_xBHwKZQeJzXU6yVENS91-t2g8V0qms9n7o8Fd_x6XqJqgvfZep-94cU2LJW285AYRLkWPitPVQRqQSKiCeFbdw0z5hebwP54AYydg8d6v05cArmlTF29oZUlVGMeyrOH1zngVxvs9UmaDH12ZE4QTC6OgaLIWuVMQpOUa_-TwtRKbOyR3KPtDEk9JVXmWjgRJ2VQscFQ",
 			"type": "default"
 		}
 	]
