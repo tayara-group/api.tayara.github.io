@@ -244,6 +244,93 @@ curl --X POST 'https://marketplace-api.tayara.tn/upload' \
 --form 'file=@"/home/tayara/images/listing-image.png"'
 ```
 
+### Upload image by url
+
+`POST` https://marketplace-api.tayara.tn/upload-from-url
+
+- **Headers:**
+
+  ```yaml
+  Content-Type: "application/json"
+  Authorization: "Bearer <APP_TOKEN>"
+  ```
+
+
+- **Body:**
+
+  ```json
+  [
+    "URL1",
+    "URL2"
+  ]
+  ```
+
+
+##### Success Response
+
+- **Status:** `201 Created`
+
+  **Body:**
+
+  ```json
+  [
+    "image_url_on_tayara_servers",
+    "image_url_on_tayara_servers"
+  ]
+  ```
+
+
+##### Error Responses
+
+- **Status:** `404 NOT FOUND`
+
+  **Body:**
+
+  ```json
+  {
+      "code": 404,
+      "error": "Not found",
+      "message": "Requested route was not found"
+  }
+  ```
+
+
+- **Status:** `401 UNAUTHORIZED`
+
+  **Body:**
+
+  ```json
+  {
+      "code": 401,
+      "error": "Forbidden",
+      "message": "You are forbidden to access ."
+  }
+  ```
+
+- **Status:** `500 UNKNOWN`
+
+  **Body:**
+
+  ```json
+  {
+      "code": 500,
+      "error": "Unknown",
+      "message": ""         // exception details
+  }
+  ```
+
+
+##### Example Curl Request
+
+```bash
+curl --X POST 'https://marketplace-api.tayara.tn/upload' \
+--header 'Authorization: Bearer <Token>' \
+--data-raw '[
+    "https://res.cloudinary.com/dtpgi0zck/image/upload/s--6vkGBwaH--/c_fit,h_580,w_860/v1/EducationHub/photos/floating-in-the-sea.jpg",
+    "https://cdn.britannica.com/79/65379-050-5CF52BAC/Shortfin-mako-shark-seas.jpg"
+]'
+```
+
 ## Create Ad
 
 `POST` https://marketplace-api.tayara.tn/postad
