@@ -1,9 +1,10 @@
 {
 	"info": {
-		"_postman_id": "85dd0736-10ca-4ddd-a0dc-ee5750126f9b",
+		"_postman_id": "812f8a7a-e72d-4b02-96d5-4193fdfcc89a",
 		"name": "Tayara Marketplace API",
 		"description": "Tayara marketplace API is a REST API that enables third parties to create ads on tayara.tn for the goal to be integrated in their systems like ERP, CRM...",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24093830"
 	},
 	"item": [
 		{
@@ -52,7 +53,7 @@
 					"status": "OK",
 					"code": 200,
 					"_postman_previewlanguage": "json",
-					"header": null,
+					"header": [],
 					"cookie": [],
 					"body": "[\n  {\n    \"id\": \"60be84bd50ab95b45b08a09d\",                  // id of current category\n    \"parentcategoryxid\": \"60be84bc50ab95b45b08a093\",   // id of parent category\n    \"name\": \"Maisons et Villas\"               // name of category\n  }\n]"
 				},
@@ -81,8 +82,8 @@
 						}
 					},
 					"code": 401,
-					"_postman_previewlanguage": null,
-					"header": null,
+					"_postman_previewlanguage": "Text",
+					"header": [],
 					"cookie": [],
 					"body": "{\n    \"code\": 401,\n    \"error\": \"Forbidden\",\n    \"message\": \"You are forbidden to access .\"\n}"
 				},
@@ -112,8 +113,8 @@
 					},
 					"status": "Internal Server Error",
 					"code": 500,
-					"_postman_previewlanguage": null,
-					"header": null,
+					"_postman_previewlanguage": "Text",
+					"header": [],
 					"cookie": [],
 					"body": "{\n    \"code\": 500,\n    \"error\": \"Unknown\",\n    \"message\": \"\"         // exception details\n}"
 				}
@@ -167,7 +168,7 @@
 					"status": "OK",
 					"code": 200,
 					"_postman_previewlanguage": "json",
-					"header": null,
+					"header": [],
 					"cookie": [],
 					"body": "{\n  \"id\": \"60be84bd50ab95b45b08a09d\",\n  \"name\": \"Maisons et Villas\",\n  \"parentcategoryxid\": \"60be84bc50ab95b45b08a093\",\n  \"adparams\": [\n    {\n      \"name\": \"Type de transaction\",\n      \"type\": \"array\",\n      \"label\": \"Type de transaction\",\n      \"possiblevalues\": [\"À Vendre\", \"À Louer\"],\n      \"dependantName\": \"\"\n    },\n    {\n      \"name\": \"Superficie\",\n      \"type\": \"number\",\n      \"label\": \"Superficie\",\n      \"dependantName\": \"\"\n    },\n    {\n      \"name\": \"Salles de bains\",\n      \"type\": \"number\",\n      \"label\": \"Salles de bains\",\n      \"possiblevalues\": [\"1\", \"2\", \"3\", \"4\", \"5\", \"5+\"],\n      \"rangeValues\": {\n        \"min\": 0,\n        \"max\": 20\n      },\n      \"dependantName\": \"\"\n    },\n    {\n      \"name\": \"Chambres\",\n      \"type\": \"number\",\n      \"label\": \"Chambres\",\n      \"possiblevalues\": [\"1\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\", \"8\", \"9\", \"10\", \"10+\"],\n      \"rangeValues\": {\n        \"min\": 0,\n        \"max\": 20\n      },\n      \"dependantName\": \"\"\n    }\n  ]\n}"
 				},
@@ -205,8 +206,8 @@
 						}
 					},
 					"code": 401,
-					"_postman_previewlanguage": null,
-					"header": null,
+					"_postman_previewlanguage": "Text",
+					"header": [],
 					"cookie": [],
 					"body": "{\n    \"code\": 401,\n    \"error\": \"Forbidden\",\n    \"message\": \"You are forbidden to access .\"\n}"
 				},
@@ -245,8 +246,8 @@
 					},
 					"status": "Internal Server Error",
 					"code": 500,
-					"_postman_previewlanguage": null,
-					"header": null,
+					"_postman_previewlanguage": "Text",
+					"header": [],
 					"cookie": [],
 					"body": "{\n    \"code\": 500,\n    \"error\": \"Unknown\",\n    \"message\": \"\"         // exception details\n}"
 				}
@@ -265,12 +266,7 @@
 							"type": "file",
 							"src": []
 						}
-					],
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					]
 				},
 				"url": {
 					"raw": "https://marketplace-api.tayara.tn/upload",
@@ -328,7 +324,7 @@
 					"status": "OK",
 					"code": 200,
 					"_postman_previewlanguage": "json",
-					"header": null,
+					"header": [],
 					"cookie": [],
 					"body": "[\n    \"https://storage.googleapis.com/tayara-migration-yams-pro/6a/6a7af380-1055-472b-aae6-e05484cdb70d\"\n]"
 				},
@@ -374,7 +370,7 @@
 					"status": "Unauthorized",
 					"code": 401,
 					"_postman_previewlanguage": "json",
-					"header": null,
+					"header": [],
 					"cookie": [],
 					"body": "{\n    \"code\": 401,\n    \"error\": \"Forbidden\",\n    \"message\": \"You are forbidden to access .\"\n}"
 				},
@@ -420,7 +416,7 @@
 					"status": "Internal Server Error",
 					"code": 500,
 					"_postman_previewlanguage": "json",
-					"header": null,
+					"header": [],
 					"cookie": [],
 					"body": "{\n    \"code\": 500,\n    \"error\": \"Unknown\",\n    \"message\": \"\"         // exception details\n}"
 				}
@@ -490,7 +486,7 @@
 					"status": "OK",
 					"code": 200,
 					"_postman_previewlanguage": "json",
-					"header": null,
+					"header": [],
 					"cookie": [],
 					"body": "{\n  \"code\": 200,\n  \"message\": \"ad created successfully\",\n  \"id\": \"string\"  // id of newly inserted ad \n}"
 				},
@@ -530,7 +526,7 @@
 					"status": "Unauthorized",
 					"code": 401,
 					"_postman_previewlanguage": "json",
-					"header": null,
+					"header": [],
 					"cookie": [],
 					"body": "{\n    \"code\": 401,\n    \"error\": \"Forbidden\",\n    \"message\": \"You are forbidden to access .\"\n}"
 				},
@@ -570,6 +566,138 @@
 					"status": "Internal Server Error",
 					"code": 500,
 					"_postman_previewlanguage": "json",
+					"header": [],
+					"cookie": [],
+					"body": "{\n    \"code\": 500,\n    \"error\": \"Unknown\",\n    \"message\": \"\"         // exception details\n}"
+				}
+			]
+		},
+		{
+			"name": "Upload images by url",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    \"URL1\",\n    \"URL2\"\n\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://marketplace-api.tayara.tn/upload-from-url",
+					"protocol": "https",
+					"host": [
+						"marketplace-api",
+						"tayara",
+						"tn"
+					],
+					"path": [
+						"upload-from-url"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    \"https://res.cloudinary.com/dtpgi0zck/image/upload/s--6vkGBwaH--/c_fit,h_580,w_860/v1/EducationHub/photos/floating-in-the-sea.jpg\",\n    \"https://cdn.britannica.com/79/65379-050-5CF52BAC/Shortfin-mako-shark-seas.jpg\"\n\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://marketplace-api.tayara.tn/upload-from-url",
+							"protocol": "https",
+							"host": [
+								"marketplace-api",
+								"tayara",
+								"tn"
+							],
+							"path": [
+								"upload-from-url"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "[\n    \"https://storage.googleapis.com/tayara-migration-yams-pro/e0/e0585179-89a4-46b8-be37-f11fbb917d90\",\n    \"https://storage.googleapis.com/tayara-migration-yams-pro/59/59f193a4-6c48-44cd-97e7-ff77cee20d10\"\n]"
+				},
+				{
+					"name": "Unauthorized",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    \"URL1\",\n    \"URL2\"\n\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://marketplace-api.tayara.tn/upload-from-url",
+							"protocol": "https",
+							"host": [
+								"marketplace-api",
+								"tayara",
+								"tn"
+							],
+							"path": [
+								"upload-from-url"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"code\": 401,\n    \"error\": \"Forbidden\",\n    \"message\": \"You are forbidden to access .\"\n}"
+				},
+				{
+					"name": "Internal Server Error",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    \"URL1\",\n    \"URL2\"\n\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://marketplace-api.tayara.tn/upload-from-url",
+							"protocol": "https",
+							"host": [
+								"marketplace-api",
+								"tayara",
+								"tn"
+							],
+							"path": [
+								"upload-from-url"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": null,
 					"header": null,
 					"cookie": [],
 					"body": "{\n    \"code\": 500,\n    \"error\": \"Unknown\",\n    \"message\": \"\"         // exception details\n}"
